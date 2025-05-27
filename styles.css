@@ -274,7 +274,7 @@ section {
     font-size: 1.2rem;
 }
 
-/* Contact Form */
+/* Contact Form and Details Styling */
 .contact {
     padding: 40px 0;
 }
@@ -970,5 +970,4 @@ body.big-cursor * {
     .page-title .location {
         font-size: 1.3rem;
     }
-} 
 } 

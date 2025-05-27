@@ -2,7 +2,7 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>עו"ד ביהוד - מריאטה פנחסי</title>
     <meta name="description" content="עו"ד ונוטריון ביהוד – מריאטה פנחסי. ייצוג אישי, מקצועי ודיסקרטי. שירותי משפחה, נדל"ן, צוואות ונוטריון.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -174,6 +174,53 @@
 
     <!-- מיכל לפוטר -->
     <div id="footer-container"></div>
+
+    <button id="accessibilityToggle" class="accessibility-toggle" aria-label="פתח תפריט נגישות">
+        <i class="fas fa-universal-access"></i>
+    </button>
+
+    <div id="accessibilityMenu" class="accessibility-menu" role="dialog" aria-label="תפריט נגישות">
+        <h3>
+            הגדרות נגישות
+            <span id="closeAccessibility" class="close-btn" aria-label="סגור תפריט נגישות">
+                <i class="fas fa-times"></i>
+            </span>
+        </h3>
+        
+        <div class="section">
+            <h4>גודל טקסט</h4>
+            <button id="decreaseFontBtn" aria-label="הקטן טקסט">
+                <i class="fas fa-minus"></i> א
+            </button>
+            <button id="resetFontBtn" aria-label="אפס גודל טקסט">
+                א
+            </button>
+            <button id="increaseFontBtn" aria-label="הגדל טקסט">
+                <i class="fas fa-plus"></i> א
+            </button>
+        </div>
+        
+        <div class="section">
+            <h4>ניגודיות</h4>
+            <button id="highContrastBtn" aria-label="הפעל/כבה ניגודיות גבוהה">
+                <i class="fas fa-adjust"></i> ניגודיות גבוהה
+            </button>
+        </div>
+        
+        <div class="section">
+            <h4>הדגשת קישורים</h4>
+            <button id="highlightLinksBtn" aria-label="הפעל/כבה הדגשת קישורים">
+                <i class="fas fa-link"></i> הדגש קישורים
+            </button>
+        </div>
+        
+        <div class="section">
+            <h4>סמן גדול</h4>
+            <button id="bigCursorBtn" aria-label="הפעל/כבה סמן גדול">
+                <i class="fas fa-mouse-pointer"></i> סמן גדול
+            </button>
+        </div>
+    </div>
 
     <!-- טעינת סקריפטים -->
     <script src="../assets/js/components-loader.js"></script>
