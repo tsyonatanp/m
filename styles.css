@@ -39,9 +39,11 @@ body {
 }
 
 .container {
+    padding: 0 15px;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 /* Header */
@@ -274,73 +276,45 @@ section {
 
 /* Contact Form */
 .contact {
-    padding: 80px 0;
-    background-color: var(--white);
-    margin-bottom: 30px;
-    border-radius: 10px;
-    box-shadow: var(--shadow-sm);
+    padding: 40px 0;
 }
 
 .contact .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: start;
-    max-width: 1000px;
-}
-
-.contact-form {
-    padding: 40px;
-    background: var(--light-bg);
-    border-radius: 10px;
-    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
 }
 
 .contact-details {
-    padding: 40px;
     background: var(--light-bg);
+    padding: 25px;
     border-radius: 10px;
     box-shadow: var(--shadow-sm);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .contact-details h3 {
     color: var(--primary-color);
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
     text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent-color);
 }
 
 .contact-details p {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 1.5rem;
-    font-size: 1.2rem;
+    gap: 10px;
+    margin: 15px 0;
+    font-size: 1.1rem;
 }
 
 .contact-details i {
     color: var(--accent-color);
-    font-size: 1.4rem;
-    width: 30px;
-    text-align: center;
-}
-
-.contact-details ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     font-size: 1.2rem;
-}
-
-.contact-details ul li {
-    margin: 0.8rem 0;
-    padding-right: 45px;
+    width: 24px;
+    text-align: center;
 }
 
 .contact-details a {
@@ -353,493 +327,401 @@ section {
     color: var(--accent-color);
 }
 
+.contact-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 35px;
+}
+
+.contact-details ul li {
+    margin: 8px 0;
+    font-size: 1.1rem;
+}
+
+.contact-form {
+    background: var(--light-bg);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gray-light);
+    border-radius: 8px;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: var(--white);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(196, 166, 97, 0.1);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form .btn {
+    width: 100%;
+    margin-top: 10px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.contact-form .btn:hover {
+    background-color: #B39555;
+    transform: translateY(-2px);
+}
+
 @media (max-width: 768px) {
-    .container {
+    .contact {
+        padding: 20px 0;
+    }
+
+    .contact .container {
+        gap: 20px;
         padding: 0 15px;
     }
 
-    header {
-        padding: 8px 0;
+    .contact-details,
+    .contact-form {
+        padding: 20px;
     }
 
-    .header-content {
-        flex-direction: column;
-        gap: 10px;
+    .contact-details h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
     }
 
-    .logo-container {
-        flex-direction: row;
-        justify-content: center;
+    .contact-details p,
+    .contact-details ul li {
+        font-size: 1rem;
     }
 
-    .logo {
-        height: 50px;
-        margin-left: 10px;
+    .form-group {
+        margin-bottom: 15px;
     }
 
-    .logo-text h1 {
+    .form-group label {
+        font-size: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+    }
+
+    .form-group textarea {
+        min-height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        padding: 15px 0;
+    }
+
+    .contact .container {
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .contact-details,
+    .contact-form {
+        padding: 15px;
+    }
+
+    .contact-details h3 {
         font-size: 1.2rem;
+        margin-bottom: 12px;
     }
 
-    .logo-text p {
-        font-size: 0.9rem;
+    .contact-details p,
+    .contact-details ul li {
+        font-size: 0.95rem;
     }
 
-    .contact-info {
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
-        gap: 0.5rem;
-    }
-
-    .hero {
-        padding: 100px 0 40px;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
+    .contact-details i {
         font-size: 1.1rem;
+        width: 20px;
     }
 
-    .profile-image {
-        width: 180px;
-        height: 180px;
+    .form-group {
+        margin-bottom: 12px;
     }
 
-    .section-title {
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
+    .form-group label {
+        font-size: 0.95rem;
+        margin-bottom: 6px;
     }
 
-    .expertise-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+    .form-group input,
+    .form-group textarea {
+        padding: 8px;
+        font-size: 0.95rem;
     }
 
-    .expertise-item {
-        padding: 1.5rem;
+    .form-group textarea {
+        min-height: 80px;
     }
 
+    .contact-form .btn {
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
+
+/* עדכון צבעים בכותרות */
+.section-title {
+    color: var(--primary-color);
+}
+
+.section-title::after {
+    background-color: var(--accent-color);
+}
+
+/* עדכון צבעים באייקונים */
+.expertise-item i {
+    color: var(--accent-color);
+}
+
+.expertise-item h3 {
+    color: var(--primary-color);
+}
+
+/* עדכון צבעים בטסטימוניאלס */
+.testimonial-card::before {
+    color: var(--accent-color);
+}
+
+/* עדכון צבעים בטופס */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(196, 166, 97, 0.1);
+}
+
+/* עדכון צבעים בפוטר */
+footer {
+    background: var(--gradient);
+}
+
+/* עדכון צבעים בקישורים */
+a {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Floating Buttons */
+.floating-buttons {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1100;
+}
+
+.floating-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--white);
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: var(--shadow-md);
+}
+
+.floating-button:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-lg);
+}
+
+.floating-button i {
+    font-size: 24px;
+}
+
+.floating-button::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    right: 75px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.floating-button:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.floating-button.whatsapp {
+    background-color: #25D366;
+}
+
+.floating-button.phone {
+    background-color: #007AFF;
+}
+
+.floating-button.mail {
+    background-color: #FF2D55;
+}
+
+.floating-button.waze {
+    background-color: #33CCFF;
+}
+
+@media (max-width: 768px) {
     .floating-buttons {
+        position: fixed;
         bottom: 20px;
-        left: 20px;
+        left: 50%;
+        transform: translateX(-50%);
         flex-direction: row;
+        top: auto;
         gap: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 10px;
+        border-radius: 25px;
+        box-shadow: var(--shadow-md);
+        width: auto;
     }
 
     .floating-button {
         width: 45px;
         height: 45px;
-        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .floating-button i {
+        font-size: 20px;
     }
 
     .floating-button::before {
-        font-size: 0.8rem;
-        top: -30px;
-        right: 50%;
-        transform: translateX(50%);
-        white-space: nowrap;
+        display: none;
     }
 
     .contact .container {
+        display: flex;
         flex-direction: column;
+        gap: 20px;
     }
 
     .contact-form,
     .contact-details {
         width: 100%;
-        padding: 1rem;
+        padding: 15px;
     }
 
-    .map-container {
-        margin: 1rem 0;
-        height: 300px;
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .page-title h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .page-title .location {
+        font-size: 1.4rem;
     }
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 0 10px;
-    }
-
-    .logo {
-        height: 40px;
-    }
-
-    .logo-text h1 {
-        font-size: 1rem;
-    }
-
-    .logo-text p {
-        font-size: 0.8rem;
-    }
-
-    .btn {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
-    }
-
-    .profile-image {
-        width: 150px;
-        height: 150px;
-    }
-
-    .hero h1 {
-        font-size: 1.6rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .section-title {
-        font-size: 1.5rem;
-    }
-
     .floating-buttons {
         bottom: 15px;
-        left: 15px;
+        padding: 8px;
         gap: 8px;
     }
 
     .floating-button {
         width: 40px;
         height: 40px;
-        font-size: 1.1rem;
-    }
-}
-
-/* עדכון צבעים בכותרות */
-.section-title {
-    color: var(--primary-color);
-}
-
-.section-title::after {
-    background-color: var(--accent-color);
-}
-
-/* עדכון צבעים באייקונים */
-.expertise-item i {
-    color: var(--accent-color);
-}
-
-.expertise-item h3 {
-    color: var(--primary-color);
-}
-
-/* עדכון צבעים בטסטימוניאלס */
-.testimonial-card::before {
-    color: var(--accent-color);
-}
-
-/* עדכון צבעים בטופס */
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--accent-color);
-    box-shadow: 0 0 0 2px rgba(196, 166, 97, 0.1);
-}
-
-/* עדכון צבעים בפוטר */
-footer {
-    background: var(--gradient);
-}
-
-/* עדכון צבעים בקישורים */
-a {
-    color: var(--primary-color);
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: var(--accent-color);
-}
-
-/* Floating Buttons */
-.floating-buttons {
-    position: fixed;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    z-index: 1100;
-}
-
-.floating-button {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: var(--white);
-    transition: all 0.3s ease;
-    position: relative;
-    box-shadow: var(--shadow-md);
-}
-
-.floating-button:hover {
-    transform: scale(1.1);
-    box-shadow: var(--shadow-lg);
-}
-
-.floating-button i {
-    font-size: 24px;
-}
-
-.floating-button::before {
-    content: attr(data-tooltip);
-    position: absolute;
-    right: 75px;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 8px 12px;
-    border-radius: 4px;
-    font-size: 14px;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-}
-
-.floating-button:hover::before {
-    opacity: 1;
-    visibility: visible;
-}
-
-.floating-button.whatsapp {
-    background-color: #25D366;
-}
-
-.floating-button.phone {
-    background-color: #007AFF;
-}
-
-.floating-button.mail {
-    background-color: #FF2D55;
-}
-
-.floating-button.waze {
-    background-color: #33CCFF;
-}
-
-@media (max-width: 768px) {
-    .floating-buttons {
-        left: 10px;
-    }
-
-    .floating-button {
-        width: 50px;
-        height: 50px;
-    }
-
-    .floating-button i {
-        font-size: 20px;
-    }
-
-    .floating-button::before {
-        display: none;
-    }
-}
-
-@media (max-width: 480px) {
-    .floating-buttons {
-        left: 5px;
-    }
-
-    .floating-button {
-        width: 40px;
-        height: 40px;
     }
 
     .floating-button i {
         font-size: 18px;
     }
-}
 
-/* Map */
-.map-container {
-    width: 100%;
-    height: 450px;
-    margin: 2rem 0;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: var(--shadow-md);
-}
-
-.map-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* Text Alignment Fixes */
-.hero,
-.section-title,
-.expertise-item,
-.testimonial-card,
-.contact-form {
-    text-align: center;
-}
-
-.about p,
-.local-services p,
-.contact-details {
-    text-align: right;
-}
-
-/* עדכון צבעים בכותרות */
-.section-title {
-    color: var(--primary-color);
-}
-
-.section-title::after {
-    background-color: var(--accent-color);
-}
-
-/* עדכון צבעים באייקונים */
-.expertise-item i {
-    color: var(--accent-color);
-}
-
-.expertise-item h3 {
-    color: var(--primary-color);
-}
-
-/* עדכון צבעים בטסטימוניאלס */
-.testimonial-card::before {
-    color: var(--accent-color);
-}
-
-/* עדכון צבעים בטופס */
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--accent-color);
-    box-shadow: 0 0 0 2px rgba(196, 166, 97, 0.1);
-}
-
-/* עדכון צבעים בפוטר */
-footer {
-    background: var(--gradient);
-}
-
-/* עדכון צבעים בקישורים */
-a {
-    color: var(--primary-color);
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: var(--accent-color);
-}
-
-/* Floating Buttons */
-.floating-buttons {
-    position: fixed;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    z-index: 1100;
-}
-
-.floating-button {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: var(--white);
-    transition: all 0.3s ease;
-    position: relative;
-    box-shadow: var(--shadow-md);
-}
-
-.floating-button:hover {
-    transform: scale(1.1);
-    box-shadow: var(--shadow-lg);
-}
-
-.floating-button i {
-    font-size: 24px;
-}
-
-.floating-button::before {
-    content: attr(data-tooltip);
-    position: absolute;
-    right: 75px;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 8px 12px;
-    border-radius: 4px;
-    font-size: 14px;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-}
-
-.floating-button:hover::before {
-    opacity: 1;
-    visibility: visible;
-}
-
-.floating-button.whatsapp {
-    background-color: #25D366;
-}
-
-.floating-button.phone {
-    background-color: #007AFF;
-}
-
-.floating-button.mail {
-    background-color: #FF2D55;
-}
-
-.floating-button.waze {
-    background-color: #33CCFF;
-}
-
-@media (max-width: 768px) {
-    .floating-buttons {
-        left: 10px;
+    .hero {
+        padding: 60px 0 30px;
     }
 
-    .floating-button {
-        width: 50px;
-        height: 50px;
+    .profile-image {
+        width: 120px;
+        height: 120px;
     }
 
-    .floating-button i {
-        font-size: 20px;
+    .page-title h1 {
+        font-size: 1.5rem;
     }
 
-    .floating-button::before {
-        display: none;
-    }
-}
-
-@media (max-width: 480px) {
-    .floating-buttons {
-        left: 5px;
+    .page-title .location {
+        font-size: 1.2rem;
     }
 
-    .floating-button {
-        width: 40px;
-        height: 40px;
+    .contact-form,
+    .contact-details {
+        padding: 10px;
     }
 
-    .floating-button i {
-        font-size: 18px;
+    .form-group input,
+    .form-group textarea {
+        padding: 8px;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -1088,4 +970,5 @@ body.big-cursor * {
     .page-title .location {
         font-size: 1.3rem;
     }
+} 
 } 
