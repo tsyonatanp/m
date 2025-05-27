@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="80" viewBox="0 0 300 80" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .logo-text { font-family: 'Rubik', Arial, sans-serif; }
+        .primary { fill: #1a237e; }
+        .secondary { fill: #283593; }
+        .icon { fill: #1a237e; }
+    </style>
+    <g>
+        <!-- Scales of Justice Icon -->
+        <path class="icon" d="M30,20 L50,20 L40,10 Z" />
+        <path class="icon" d="M35,20 L45,20 L40,30 Z" />
+        <line class="icon" x1="40" y1="10" x2="40" y2="40" stroke="#1a237e" stroke-width="2"/>
+        <circle class="icon" cx="40" cy="42" r="2"/>
+        
+        <!-- Main Text -->
+        <text x="60" y="35" class="logo-text primary" font-size="24" font-weight="bold">
+            עו"ד ונוטריון
+        </text>
+        <text x="60" y="60" class="logo-text secondary" font-size="20">
+            מריאטה פנחסי
+        </text>
+    </g>
+</svg> 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="60" viewBox="0 0 200 60" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .text { font-family: Arial, sans-serif; fill: #1a237e; }
+        .icon { fill: #1a237e; }
+    </style>
+    <g>
+        <path class="icon" d="M30,10 L50,10 L40,30 Z" />
+        <text x="60" y="35" class="text" font-size="16">עו"ד מריאטה פנחסי</text>
+    </g>
+</svg> 
