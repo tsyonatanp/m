@@ -29,7 +29,7 @@
     <header>
         <div class="container header-content">
             <a href="../" class="logo-container">
-                <img src="../assets/images/logo.png" alt="לוגו עו״ד מריאטה פנחסי" class="logo">
+                <img src="../assets/images/logo.png" alt="לוגו עו״ד מריאטה פנחסי" class="logo" loading="lazy">
                 <div class="logo-text">
                     <h1>עו"ד ונוטריון מריאטה פנחסי</h1>
                     <p>ייצוג משפטי אישי ומקצועי</p>
@@ -47,7 +47,7 @@
     <section class="hero">
         <div class="container">
             <div class="profile-section">
-                <img src="../assets/images/profile.png" alt="תמונת עו״ד מריאטה פנחסי" class="profile-image">
+                <img src="../assets/images/profile.png" alt="תמונת עו״ד מריאטה פנחסי" class="profile-image" loading="lazy">
                 <div class="page-title">
                     <h1>עו"ד ונוטריון</h1>
                     <div class="location">מריאטה פנחסי - גבעת שמואל</div>
@@ -197,24 +197,28 @@
         </div>
         
         <div class="section">
-            <h4>ניגודיות וקריאות</h4>
-            <button id="contrastBtn" aria-label="שנה ניגודיות">
+            <h4>ניגודיות</h4>
+            <button id="highContrastBtn" aria-label="הפעל/כבה ניגודיות גבוהה">
                 <i class="fas fa-adjust"></i> ניגודיות גבוהה
             </button>
-            <button id="highlightLinksBtn" aria-label="הדגש קישורים">
+        </div>
+        
+        <div class="section">
+            <h4>הדגשת קישורים</h4>
+            <button id="highlightLinksBtn" aria-label="הפעל/כבה הדגשת קישורים">
                 <i class="fas fa-link"></i> הדגש קישורים
             </button>
         </div>
         
         <div class="section">
-            <h4>עזרי ניווט</h4>
-            <button id="bigCursorBtn" aria-label="הגדל סמן עכבר">
+            <h4>סמן גדול</h4>
+            <button id="bigCursorBtn" aria-label="הפעל/כבה סמן גדול">
                 <i class="fas fa-mouse-pointer"></i> סמן גדול
             </button>
         </div>
     </div>
 
-    <script src="../assets/js/components-loader.js"></script>
-    <script src="../assets/js/accessibility.js"></script>
+    <script src="../assets/js/components-loader.js" defer></script>
+    <script src="../assets/js/accessibility.js" defer></script>
 </body>
 </html> 
