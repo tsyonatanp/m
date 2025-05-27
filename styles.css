@@ -598,7 +598,7 @@ a:hover {
 
 @media (max-width: 480px) {
     .floating-buttons {
-        padding: 10px;
+        padding: 8px;
     }
 
     .floating-button {
@@ -612,7 +612,132 @@ a:hover {
 
     /* Add padding to body to prevent content from being hidden behind buttons */
     body {
-        padding-bottom: 65px;
+        padding-bottom: 70px;
+    }
+
+    /* Update header styles for mobile */
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .logo {
+        height: 40px;
+        margin-left: 8px;
+    }
+
+    .logo-text h1 {
+        font-size: 1.1rem;
+    }
+
+    .logo-text p {
+        font-size: 0.8rem;
+    }
+
+    .contact-info .btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+
+    /* Update hero section for mobile */
+    .hero {
+        padding: 80px 0 30px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 1.2rem;
+    }
+
+    .page-title h1 {
+        font-size: 1.6rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .page-title .location {
+        font-size: 1.3rem;
+    }
+
+    /* Update sections padding for mobile */
+    section {
+        padding: 40px 0;
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Update form elements for mobile */
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    .form-group label {
+        font-size: 0.95rem;
+        margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 8px;
+        font-size: 0.95rem;
+    }
+
+    .form-group textarea {
+        min-height: 80px;
+    }
+
+    .contact-form .btn {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    /* Update expertise grid for mobile */
+    .expertise-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1rem;
+    }
+
+    .expertise-item {
+        padding: 1.5rem;
+    }
+
+    .expertise-item i {
+        font-size: 2rem;
+    }
+
+    .expertise-item h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Update testimonials for mobile */
+    .testimonial-card {
+        padding: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .testimonial-card p {
+        font-size: 0.95rem;
+    }
+
+    /* Update contact details for mobile */
+    .contact-details {
+        padding: 15px;
+    }
+
+    .contact-details h3 {
+        font-size: 1.2rem;
+    }
+
+    .contact-details p,
+    .contact-details ul li {
+        font-size: 0.95rem;
     }
 }
 
