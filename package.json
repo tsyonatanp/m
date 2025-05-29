@@ -1,0 +1,40 @@
+{
+  "name": "redy-food",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.19",
+    "@hookform/resolvers": "^3.3.4",
+    "@types/google-spreadsheet": "^3.3.2",
+    "@types/node": "^20.11.16",
+    "autoprefixer": "^10.4.17",
+    "axios": "^1.6.7",
+    "googleapis": "^149.0.0",
+    "next": "14.1.0",
+    "postcss": "^8.4.35",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.50.0",
+    "react-icons": "^5.5.0",
+    "stripe": "^14.16.0",
+    "tailwindcss": "^3.4.1",
+    "telegraf": "^4.15.3",
+    "typescript": "^5.3.3",
+    "xlsx": "^0.18.5",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@typescript-eslint/parser": "^6.20.0",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "14.1.0"
+  }
+}
